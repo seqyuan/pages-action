@@ -12,7 +12,7 @@ git remote add mirror "$INPUT_TARGET_REPO_URL"
 #git push --tags --force --prune mirror "refs/remotes/origin/*:refs/heads/*"
 git add -A
 git commit -m "..."
-git push
+git push origin HEAD:main
 # NOTE: Since `post` execution is not supported for local action from './' for now, we need to
 # run the command by hand.
 /cleanup.sh mirror
