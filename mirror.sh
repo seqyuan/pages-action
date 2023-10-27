@@ -10,6 +10,7 @@ git clone https://github.com/seqyuan/sphinxbook.git
 cp -r sphinxbook/docs/* ./docs/
 git remote add mirror "$INPUT_TARGET_REPO_URL"
 #git push --tags --force --prune mirror "refs/remotes/origin/*:refs/heads/*"
+ls -l *
 git add -A
 git commit -m "..."
 git push origin HEAD:main
