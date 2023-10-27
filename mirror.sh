@@ -8,12 +8,14 @@ git config --global user.name 'seqyuan'
 git config --global user.email 'ahworld07@gmail.com'
 git clone https://github.com/seqyuan/sphinxbook.git
 cp -r sphinxbook/docs/* ./docs/
+rm -rf sphinxbook
 git remote add mirror "$INPUT_TARGET_REPO_URL"
 #git push --tags --force --prune mirror "refs/remotes/origin/*:refs/heads/*"
 ls -l *
 git add -A
 git commit -m "..."
-git push origin HEAD:main
+#git push origin HEAD:main
+git push --tags --force --prune mirror "refs/remotes/origin/*:refs/heads/*"
 # NOTE: Since `post` execution is not supported for local action from './' for now, we need to
 # run the command by hand.
 /cleanup.sh mirror
